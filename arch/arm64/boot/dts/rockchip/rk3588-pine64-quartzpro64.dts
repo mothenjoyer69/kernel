@@ -44,6 +44,22 @@
 	};
 };
 
+&sdhci {
+	/delete-property/ mmc-hs400-1_8v;
+	/delete-property/ mmc-hs400-enhanced-strobe;
+};
+
+&sdmmc {
+	/delete-property/ max-frequency;
+	/delete-property/ sd-uhs-sdr104;
+	max-frequency = <140000000>;
+	status = "okay";
+};
+
+&sata1 {
+	status = "okay";
+};
+
 &mipi_dcphy0 {
 	status = "disabled";
 };
